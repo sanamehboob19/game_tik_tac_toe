@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neon_bg_dark">
+
+    <!-- Center content: App Icon + Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp">
+
+        <!-- App Icon -->
+        <ImageView
+            android:id="@+id/splash_icon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@mipmap/icon"
+            android:contentDescription="App Icon"
+            android:layout_marginBottom="20dp" />
+
+        <!-- App Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tic Tac Toe"
+            android:textColor="@color/neon_white"
+            android:textSize="32sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Tagline -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Master"
+            android:textColor="@color/neon_cyan"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+            android:letterSpacing="0.3" />
+
+    </LinearLayout>
+
+    <!-- Bottom content: Loading bar + text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="80dp">
+
+        <!-- Loading... text -->
+        <TextView
+            android:id="@+id/txt_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:text="Loading..."
+            android:textColor="@color/neon_text_secondary"
+            android:textSize="15sp"
+            android:letterSpacing="0.15"
+            android:fontFamily="sans-serif-light"
+            android:alpha="0.9" />
+
+        <!-- Neon Progress Bar container (glow effect) -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Glow shadow layer -->
+            <ProgressBar
+                android:id="@+id/progress_bar_glow"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:progressDrawable="@drawable/neon_progress_bar_glow"
+                android:progress="0"
+                android:max="100"
+                android:alpha="0.4" />
+
+            <!-- Main neon progress bar -->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_gravity="center_vertical"
+                android:progressDrawable="@drawable/neon_progress_bar"
+                android:progress="0"
+                android:max="100" />
+
+        </FrameLayout>
+
+        <!-- Percentage text -->
+        <TextView
+            android:id="@+id/txt_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="0%"
+            android:textColor="@color/neon_cyan"
+            android:textSize="13sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.1" />
+
+    </LinearLayout>
+
+</FrameLayout>

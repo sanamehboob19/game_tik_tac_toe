@@ -1,0 +1,102 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    //noinspection AndroidLintCompileSdk,NewerVersionAvailable
+    compileSdk = 35
+    buildToolsVersion = '35.0.1'
+    namespace = 'com.nzdeveloper.tictactoe.twoplayerxoxo.puzzlegame'
+
+    defaultConfig {
+        applicationId = 'com.nzdeveloper.tictactoe.twoplayerxoxo.puzzlegame'
+        minSdk = 21
+        //noinspection AndroidLintExpiredTargetSdkVersion,OldTargetApi
+        targetSdk = 35
+        versionCode = 3
+        versionName = '0.3'
+        multiDexEnabled = true
+    }
+
+    // ─── Product Flavors ─────────────────────────────────────────────────────
+    // 'google'  → Normal Google Play build (includes GMS/AdMob)
+    // 'amazon'  → Amazon Appstore / Fire TV build (NO GMS — compatible with
+    //             Fire TV, BMW Theatre Screen, and other Amazon devices)
+    flavorDimensions += "store"
+    productFlavors {
+        google {
+            dimension "store"
+            // Google Play build — uses full GMS AdMob stack
+        }
+        amazon {
+            dimension "store"
+            // Amazon / Fire TV build — GMS-free, ads fully disabled
+            // Adds a build-config flag so Java code can check at runtime
+            buildConfigField "boolean", "IS_AMAZON_BUILD", "true"
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        buildConfig = true
+    }
+
+    dependenciesInfo {
+        includeInApk = true
+        includeInBundle = true
+    }
+
+    lintOptions {
+        checkReleaseBuilds = false
+        abortOnError = false
+        disable 'GradleDependency', 'OldTargetApi', 'NewerVersionAvailable', 'ExpiredTargetSdkVersion'
+    }
+
+    lint {
+        checkReleaseBuilds = false
+        abortOnError = false
+        disable += ['GradleDependency', 'OldTargetApi', 'NewerVersionAvailable', 'ExpiredTargetSdkVersion']
+    }
+}
+
+dependencies {
+    //noinspection GradleDependency
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    //noinspection GradleDependency
+    implementation 'com.google.android.material:material:1.12.0'
+    //noinspection GradleDependency
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    //noinspection GradleDependency
+    implementation 'androidx.core:core:1.16.0'
+    //noinspection GradleDependency
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.8.7'
+    //noinspection GradleDependency
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7'
+    //noinspection GradleDependency
+    implementation 'androidx.preference:preference:1.2.1'
+
+    // ─── Google Play Services (GMS) — Only for 'google' flavor ───────────────
+    // These libraries require Google Play Services which is NOT available on
+    // Amazon Fire TV / BMW Theatre Screen. Excluding them from 'amazon' flavor
+    // fixes the install failure on those devices.
+    //noinspection GradleDependency
+    googleImplementation 'com.google.android.gms:play-services-ads:22.6.0'
+    //noinspection GradleDependency
+    googleImplementation 'com.google.android.ump:user-messaging-platform:3.2.0'
+}
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ═══════════════════════════════════════ -->
+    <!--   NEON TIC TAC TOE - Color Palette      -->
+    <!--   Extracted from Icon & Splash Screen   -->
+    <!-- ═══════════════════════════════════════ -->
+
+    <!-- Backgrounds -->
+    <color name="neon_bg_dark">#0A0A2E</color>       <!-- Deep space navy -->
+    <color name="neon_bg_medium">#0D0D3B</color>     <!-- Mid navy -->
+    <color name="neon_bg_card">#1A1A5E</color>       <!-- Card/surface dark blue -->
+    <color name="neon_bg_overlay">#CC0A0A2E</color>  <!-- Semi-transparent overlay -->
+
+    <!-- Primary - Neon Purple -->
+    <color name="neon_purple">#9B30FF</color>        <!-- Electric purple -->
+    <color name="neon_purple_dark">#6A0DAD</color>   <!-- Deep purple -->
+    <color name="neon_purple_light">#C87DFF</color>  <!-- Light purple glow -->
+
+    <!-- Secondary - Electric Cyan -->
+    <color name="neon_cyan">#00E5FF</color>          <!-- Electric cyan -->
+    <color name="neon_cyan_dark">#0097A7</color>     <!-- Deep cyan -->
+    <color name="neon_cyan_light">#80F8FF</color>    <!-- Cyan glow -->
+
+    <!-- Accent - Hot Pink -->
+    <color name="neon_pink">#FF2D9B</color>          <!-- Hot neon pink -->
+    <color name="neon_pink_dark">#C2185B</color>     <!-- Deep pink -->
+    <color name="neon_pink_light">#FF80CC</color>    <!-- Pink glow -->
+
+    <!-- Text Colors -->
+    <color name="neon_white">#FFFFFFFF</color>       <!-- Pure white -->
+    <color name="neon_text_secondary">#B0B8FF</color><!-- Light blue-white -->
+    <color name="neon_text_dim">#6070A0</color>      <!-- Dimmed text -->
+
+    <!-- UI States -->
+    <color name="neon_success">#00FF88</color>       <!-- Neon green -->
+    <color name="neon_error">#FF3D3D</color>         <!-- Neon red -->
+    <color name="neon_divider">#1E1E5A</color>       <!-- Subtle divider -->
+
+    <!-- Legacy names (kept for backward compatibility) -->
+    <color name="purple_200">#C87DFF</color>
+    <color name="purple_500">#9B30FF</color>
+    <color name="purple_700">#6A0DAD</color>
+    <color name="teal_200">#00E5FF</color>
+    <color name="teal_700">#0097A7</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Retry Button -->
+    <color name="colorAccent">#FF2D9B</color>        <!-- Neon pink accent -->
+</resources>

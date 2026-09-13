@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<stringresources>
+	<strings>
+		<string id="NULL">
+			<en></en>
+			<de></de>
+			<es></es>
+			<fr></fr>
+			<it></it>
+			<pt></pt>
+			<ru></ru>
+			<tr/>
+		</string>		
+		<string id="INSTR_COMMON">
+			<en>The game is played on a grid consisting of 3x3 or 5x5 squares.
+				Be the first to get 3 or 4 marks in a row (horizontal, vertical, or diagonal) to win.
+				Your mark is X, opponent's mark is O.
+				The game ends once all squares have been filled.
+			</en>
+			<de>Das Spiel wird auf einem Raster aus 3x3 oder 5x5 Quadraten gespielt.
+				Erziele als Erster 3 oder 4 Symbole in einer Reihe (horizontal, vertikal oder diagonal), um zu gewinnen.
+				Dein Symbol ist X, das deines Gegners O.
+				Das Spiel endet, sobald alle Quadrate ausgefüllt sind.
+			</de>
+			<es>Se juega en un tablero de casillas de 3x3 o 5x5.
+				Para ganar, sé el primer jugador en conseguir 3 o 4 en raya (en sentido horizontal, vertical o diagonal).
+				Si juegas con la X, tu rival jugará con el O, o viceversa.
+				La partida termina una vez que no queda ninguna casilla libre.
+			</es>
+			<fr>Le jeu se joue sur une grille composée de cases 3x3 ou 5x5.
+				Soyez le premier à obtenir 3 ou 4 marques consécutives (horizontalement, verticalement ou en diagonale) pour gagner.
+				Votre marqueur est le X, celui de votre adversaire est le O.
+				La partie se termine une fois que toutes les cases sont remplies.
+			</fr>
+			<it>Il gioco si svolge su una griglia composta da 3x3 o 5x5 caselle.
+				Disponi per primo 3 o 4 simboli in fila (orizzontale, verticale o diagonale) per vincere.
+				Il tuo simbolo è X e quello dell'avversario è O.
+				Il gioco termina quando tutte le caselle sono state riempite.
+			</it>
+			<pt>O jogo ocorre em uma grade composta por quadrados 3x3 ou 5x5.
+				Seja o primeiro a obter 3 ou 4 marcas consecutivas (horizontal, vertical ou diagonal) para ganhar.
+				Sua marca é X, a marca do oponente é O.
+				O jogo termina assim que todos os quadrados estiverem preenchidos.
+			</pt>
+			<ru>Игра ведется на площади, состоящей из 3х3 или 5х5 квадратов.
+				Выиграет тот, кто получит 3 или 4 знака подряд (по горизонтали, вертикали или диагонали).
+				Ваш знак X, знак противника O.
+				Игра заканчивается, когда все квадраты заполнены.
+			</ru>
+			<tr></tr>
+		</string>
+		<string id="NORMAL">
+			<en>NORMAL</en>
+			<de>NORMAL</de>
+			<es>NORMAL</es>
+			<fr>NORMAL</fr>
+			<it>NORMALE</it>
+			<pt>NORMAL</pt>
+			<ru>ОБЫЧНЫЙ</ru>
+		</string>
+		<string id="HARD">
+			<en>HARD</en>
+			<de>SCHWER</de>
+			<es>DURO</es>
+			<fr>DIFFICILE</fr>
+			<it>DIFFICILE</it>
+			<pt>DIFÍCIL</pt>
+			<ru>ЖЕСТКИЙ</ru>
+		</string>
+		<string id="PAUSE">
+			<en>PAUSE</en>
+			<de>PAUSE</de>
+			<es>PAUSA</es>
+			<fr>PAUSE</fr>
+			<it>PAUSA</it>
+			<pt>PAUSA</pt>
+			<ru>ПАУЗА</ru>
+			<tr>DURAKLAT</tr>
+		</string>
+	</strings>
+</stringresources>

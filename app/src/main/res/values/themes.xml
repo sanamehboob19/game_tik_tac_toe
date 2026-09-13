@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.Game" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Neon Purple primary -->
+        <item name="colorPrimary">@color/neon_purple</item>
+        <item name="colorPrimaryVariant">@color/neon_purple_dark</item>
+        <item name="colorOnPrimary">@color/neon_white</item>
+        <!-- Neon Cyan secondary -->
+        <item name="colorSecondary">@color/neon_cyan</item>
+        <item name="colorSecondaryVariant">@color/neon_cyan_dark</item>
+        <item name="colorOnSecondary">@color/neon_bg_dark</item>
+        <!-- Status bar -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/neon_bg_dark</item>
+        <item name="android:navigationBarColor">@color/neon_bg_dark</item>
+
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">@bool/full_screen</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@color/neon_bg_dark</item>
+    </style>
+
+    <!-- Splash Activity theme - no static window background, activity draws its own UI -->
+    <style name="Theme.Game.Splash" parent="Theme.Game">
+        <item name="android:windowBackground">@color/neon_bg_dark</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+</resources>

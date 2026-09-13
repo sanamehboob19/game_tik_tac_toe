@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Ignore obsolete dependencies/libraries update warnings -->
+    <issue id="GradleDependency" severity="ignore" />
+    <!-- Ignore newer SDK version available checks (e.g. compileSdk newer version) -->
+    <issue id="NewerVersionAvailable" severity="ignore" />
+    <!-- Ignore targetSdkVersion not targeting the latest release -->
+    <issue id="OldTargetApi" severity="ignore" />
+    <issue id="ExpiredTargetSdkVersion" severity="ignore" />
+</lint>

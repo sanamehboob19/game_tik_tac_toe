@@ -1,0 +1,38 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        agp_version = '8.0.0'
+        agp_version1 = '8.4.1'
+        agp_version2 = '8.5.0'
+        agp_version3 = '8.5.1'
+        agp_version4 = '8.5.2'
+        agp_version5 = '8.5.2'
+        agp_version6 = '8.9.1'
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$agp_version6"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile){
+            options.compilerArgs << "-Xlint:deprecation"
+            options.compilerArgs << "-Xlint:unchecked"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Google Play flavor manifest overlay.
+    These entries are merged ONLY into the 'google' flavor APK.
+    They require Google Play Services (GMS) which is available on standard Android devices.
+    Amazon Fire TV / BMW Theatre Screen builds use the 'amazon' flavor which omits these.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- AdMob Ad ID permission — requires GMS -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
+    <application>
+        <!-- Required by AdMob — delay measurement init until consent collected -->
+        <meta-data
+            android:name="com.google.android.gms.ads.DELAY_APP_MEASUREMENT_INIT"
+            android:value="true"/>
+        <!-- AdMob App ID (test ID) -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+    </application>
+
+</manifest>
